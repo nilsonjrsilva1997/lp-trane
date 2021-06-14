@@ -33,6 +33,10 @@ html {
     width: 20% !important;
 }
 
+.w-10 {
+    width: 10% !important;
+}
+
 .w-40 {
     width: 40% !important;
 }
@@ -79,6 +83,38 @@ html {
 .text-title {
     color: $orange-trane;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     text-shadow: 1px 1px 1px;
+}
+
+.img-full {
+    width: 100px;
+    cursor: pointer;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa {
+    font-size: 2.5em
+}
+
+.estrelas label i.fa:before {
+    content: '\f005';
+    color: #FC0;
+}
+
+.estrelas input[type=radio]:checked~label i.fa:before {
+    color: #CCC;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
 }

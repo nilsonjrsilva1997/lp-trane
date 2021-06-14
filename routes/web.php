@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::prefix('credenciamentos')->group(function () {
+    Route::get('/', function () {
+        return view('accreditation');
+    });
+});
