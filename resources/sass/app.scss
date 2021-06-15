@@ -67,18 +67,18 @@ html {
     object-fit: cover;
 }
 
-.btn {
-    font-weight: bold;
-    text-shadow: 3px 1px 1px $black;
-    border-radius: 18px;
-    font-size: 15px;
-    box-shadow: 1px 1px 1px $black;
-    border: solid 0px;
-}
+// .btn {
+//     font-weight: bold;
+//     text-shadow: 3px 1px 1px $black;
+//     border-radius: 18px;
+//     font-size: 15px;
+//     box-shadow: 1px 1px 1px $black;
+//     border: solid 0px;
+// }
 
-.btn-primary {
-    background-color: $orange-trane;
-}
+// .btn-primary {
+//     background-color: $orange-trane;
+// }
 
 .text-title {
     color: $orange-trane;
@@ -95,17 +95,11 @@ html {
 .estrelas input[type=radio] {
     display: none;
 }
-
-.estrelas label i.fa {
-    font-size: 2.5em
-}
-
 .estrelas label i.fa:before {
-    content: '\f005';
+    content:'\f005';
     color: #FC0;
 }
-
-.estrelas input[type=radio]:checked~label i.fa:before {
+.estrelas input[type=radio]:checked ~ label i.fa:before {
     color: #CCC;
 }
 
@@ -117,4 +111,25 @@ html {
 
 a {
     text-decoration: none;
+}
+
+.img-open-modal {
+    cursor: pointer;
+}
+
+.input-file {
+    position:absolute;
+    z-index:2;
+    top:0;
+    left:0;
+    filter: alpha(opacity=0);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity:0;
+    background-color:transparent;
+    color:transparent;
+}
+
+.inherit {
+    display: inherit;
+    justify-content: space-around;
 }

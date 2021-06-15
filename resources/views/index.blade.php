@@ -11,15 +11,19 @@
     <div class="row justify-content-center mt-5">
 
         <div class="col-md-6 col-12">
-            <img src={{ url('storage/images/credenciamento1.jpg') }} alt=""
-                class="img-fluid img-accreditation full p-3 shadow-lg p-3 mb-5 bg-white rounded" data-toggle="tooltip"
-                data-placement="top" title="Credenciamento 1" role="button">
+            <a href={{ url('/credenciamentos') }}>
+                <img src={{ url('storage/images/credenciamento1.jpg') }} alt=""
+                    class="img-fluid img-accreditation full p-3 shadow-lg p-3 mb-5 bg-white rounded" data-toggle="tooltip"
+                    data-placement="top" title="Credenciamento 1" role="button">
+            </a>
         </div>
 
         <div class="col-md-6 col-12">
-            <img src={{ url('storage/images/credenciamento2.jpg') }} alt=""
-                class="img-fluid img-accreditation full p-3 shadow-lg p-3 mb-5 bg-white rounded" data-toggle="tooltip"
-                data-placement="top" title="Credenciamento 2" role="button">
+            <a href={{ url('/credenciamentos') }}>
+                <img src={{ url('storage/images/credenciamento2.jpg') }} alt=""
+                    class="img-fluid img-accreditation full p-3 shadow-lg p-3 mb-5 bg-white rounded" data-toggle="tooltip"
+                    data-placement="top" title="Credenciamento 2" role="button">
+            </a>
         </div>
     </div>
 
@@ -65,6 +69,5 @@
 
     <script>
         $('#modalWelcome').modal('show');
-
     </script>
 @stop

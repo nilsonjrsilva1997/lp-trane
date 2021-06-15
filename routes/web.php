@@ -22,3 +22,13 @@ Route::prefix('credenciamentos')->group(function () {
         return view('accreditation');
     });
 });
+
+Route::prefix('atividades')->group(function () {
+    Route::get('/instalacao', function () {
+        return view('services.installation');
+    });
+
+    Route::get('/manutencao', function () {
+        return view('services.maintenance');
+    });
+});
