@@ -11,7 +11,7 @@
    </div>
    <div class="row mt-5">
       <div class="col-md-12 col-12 d-flex justify-content-center">
-         <section>
+         <section id="sectionMap">
             <embed id="E" src={{ url('storage/images/map.svg') }} type="image/svg+xml">
             <p id="nome_estado"></p>
             <p id="capital_estado"></p>
