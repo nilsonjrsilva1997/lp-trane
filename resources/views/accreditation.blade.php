@@ -256,17 +256,22 @@
                   <div class="row">
                      <div class="col-md-12">
                         <div class="card w-100">
-                           <div class="d-flex justify-content-center mt-3">                                        
-                              <img class="card-img-top w-25" src="https://www.w3schools.com/w3images/avatar2.png" alt="Card image cap">
-                           </div>
-                           <div class="card-body">
-                              <h5 class="card-title">Fulaninho de tal</h5>
+
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="d-flex justify-content-start p-3">                                        
+                                        <img class="card-img-top w-75" src="https://www.w3schools.com/w3images/avatar2.png" alt="Card image cap">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-12 p-3">
+                                <h2 class="card-title">Fulaninho de tal</h2>
                               <p class="card-text">
                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                               </p>
-                              <p class="card-text">
-                                 Avaliações 
+                              <p class="card-text text-silver">
                               <div class="estrelas">
+                                 Avaliações 
                                  <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
                                  <label for="cm_star-1"><i class="fa"></i></label>
                                  <input type="radio" id="cm_star-1" name="fb" value="1"/>
@@ -280,17 +285,22 @@
                                  <input type="radio" id="cm_star-5" name="fb" value="5"/>
                               </div>
                               </p>
-                              <a href="#" class="btn btn-primary">
+                              <a href="#" class="btn btn-success">
                               <i class="fa fa-whatsapp"></i>
                               (13) 99111-5566</a>
-                           </div>
+                                </div>
+
+                            </div>
+                           
+                              
+                           
                         </div>
                      </div>
                   </div>
-                  <div class="row">
+                  <div class="row mt-3">
                      <div class="col-md-4 col-12">
                         <p>
-                           <a href={{ url('/atividades/instalacao') }} target="_blank">Instalação</a>
+                           <a href={{ url('/atividades/instalacao') }} target="_blank"><button class="btn btn-secondary">Instalação</button></a>
                         </p>
                         <p>
                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.                                   
@@ -298,7 +308,7 @@
                      </div>
                      <div class="col-md-4 col-12">
                         <p>
-                           <a href={{ url('/atividades/manutencao') }} target="_blank">Manutenção</a>
+                           <a href={{ url('/atividades/manutencao') }} target="_blank"><button class="btn btn-secondary">Manutenção</button></a>
                         </p>
                         <p>
                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.                                   
@@ -306,7 +316,7 @@
                      </div>
                      <div class="col-md-4 col-12">
                         <p>
-                           <a href="https://www.refricode.com.br/garantia/trane" target="_blank">Garantia Trane</a>
+                           <a href="https://www.refricode.com.br/garantia/trane" target="_blank"><button class="btn btn-secondary">Garantia Trane</button></a>
                         </p>
                         <p>
                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
