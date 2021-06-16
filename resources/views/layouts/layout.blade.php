@@ -6,6 +6,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href={{ asset('css/app.css') }}>
     <script src={{ asset('js/app.js') }}></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </head>

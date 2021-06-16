@@ -10002,25 +10002,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
-html {
+body {
   font-size: 1rem;
 }
 
-@media (min-width: 576px) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-@media (min-width: 992px) {
-  html {
-    font-size: 1.6rem;
-  }
-}
 .w-20 {
   width: 20% !important;
 }
@@ -10061,10 +10046,9 @@ html {
 }
 
 .text-title {
-  color: #FF2B00;
+  color: #333F4B;
   font-weight: bold;
-  font-size: 40px;
-  text-shadow: 1px 1px 1px;
+  font-size: 35px;
 }
 
 .img-full {
@@ -10125,7 +10109,6 @@ a {
 
 .text-silver {
   color: #302e2e;
-  font-size: 13px;
 }
 
 body {
