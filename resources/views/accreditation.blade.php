@@ -31,16 +31,16 @@
         </div>
 
         <div class="row" style="
-                border-top: 1px #d2d2d2 solid;
-                padding-top: 50px;">
+                    border-top: 1px #d2d2d2 solid;
+                    padding-top: 50px;">
             <div class="col-md-12 col-12 ml-4 text-left">
                 <p class="text-left" style="
-                            color: #333F4B;
-                            ">Resultados para CEP 11111-111 em um raio de 10km</p>
+                                color: #333F4B;
+                                ">Resultados para CEP 11111-111 em um raio de 10km</p>
                 <h1 class="text-title text-left" style="
-                            font-size: 27px;
-                            margin-bottom: 30px;
-                            ">Encontramos 12 técnicos na sua região</h1>
+                                font-size: 27px;
+                                margin-bottom: 30px;
+                                ">Encontramos 12 técnicos na sua região</h1>
             </div>
         </div>
 

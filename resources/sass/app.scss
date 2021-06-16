@@ -1,12 +1,9 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
 body {
     font-size: 1rem;
 }
@@ -49,19 +46,6 @@ body {
     object-fit: cover;
 }
 
-// .btn {
-//     font-weight: bold;
-//     text-shadow: 3px 1px 1px $black;
-//     border-radius: 18px;
-//     font-size: 15px;
-//     box-shadow: 1px 1px 1px $black;
-//     border: solid 0px;
-// }
-
-// .btn-primary {
-//     background-color: $orange-trane;
-// }
-
 .text-title {
     color: #333F4B;
     font-weight: bold;
@@ -76,11 +60,13 @@ body {
 .estrelas input[type=radio] {
     display: none;
 }
+
 .estrelas label i.fa:before {
-    content:'\f005';
+    content: '\f005';
     color: #FC0;
 }
-.estrelas input[type=radio]:checked ~ label i.fa:before {
+
+.estrelas input[type=radio]:checked~label i.fa:before {
     color: #CCC;
 }
 
@@ -99,15 +85,15 @@ a {
 }
 
 .input-file {
-    position:absolute;
-    z-index:2;
-    top:0;
-    left:0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
     filter: alpha(opacity=0);
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    opacity:0;
-    background-color:transparent;
-    color:transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    background-color: transparent;
+    color: transparent;
 }
 
 .inherit {
@@ -123,8 +109,4 @@ a {
 
 .text-silver {
     color: $text-silver;
-}
-
-body {
-    font-family: Helvetica, sans-serif;
 }
