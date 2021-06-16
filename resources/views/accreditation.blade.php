@@ -31,16 +31,16 @@
         </div>
 
         <div class="row" style="
-                                        border-top: 1px #d2d2d2 solid;
-                                        padding-top: 50px;">
+                                                    border-top: 1px #d2d2d2 solid;
+                                                    padding-top: 50px;">
             <div class="col-md-12 col-12 ml-4 text-left">
                 <p class="text-left" style="
-                                                    color: #333F4B;
-                                                    ">Resultados para CEP 11111-111 em um raio de 10km</p>
+                                                                color: #333F4B;
+                                                                ">Resultados para CEP 11111-111 em um raio de 10km</p>
                 <h1 class="text-title text-left" style="
-                                                    font-size: 27px;
-                                                    margin-bottom: 30px;
-                                                    ">Encontramos 12 técnicos na sua região</h1>
+                                                                font-size: 27px;
+                                                                margin-bottom: 30px;
+                                                                ">Encontramos 12 técnicos na sua região</h1>
             </div>
         </div>
 
@@ -87,6 +87,354 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row  mt-3">
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row mt-3">
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 d-flex justify-content-center">
+                <div class="card img-open-modal" style="/* width: 18rem; */">
+                    <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Nilson Junior</h5>
+
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Certificado Trane
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item" role="button">
+                            <div class="row">
+                                <div class="col">
+                                    <i class="far fa-file-alt"></i> Especialista em Split
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://google.com.br" target="_blank">
+                                        <i class="fas fa-file-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                        <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
     </div>

@@ -3,19 +3,7 @@
 @section('sidebar')
 @stop
 @section('content')
-    <!-- O cliente solicita o técnico para orçamento, tem um campo onde ele pode
-       escrever o local onde quer que seja instalados o equipamento e um campo que ele poderá
-       enviar até 5 fotos. A partir dai clica no botão em chamar técnico e o sistema manda uma
-       mensagem no app do técnico, porém esse técnico tem até um certo período de tempo para
-       responder ou o sistema busca outro profissional.
-       Caso o técnico aceite ele poderá iniciar uma conversa com o cliente e marcar horário para
-       visita e ou orçamento para a instalação do equipamento trane, ao final da instalação o
-       técnico ou sistema envia uma pesquisa de satisfação para o cliente onde ele responde 3 ou
-       4 perguntas e avalia o profissional.
-       Quando o profissional for avaliado e 
-       
-       viacep.com.br/ws/01001000/json/
-       -->
+
     <div class="row">
         <div class="col-md-12 col-12 text-center mt-5">
             <h1 class="text-title">Local de instalação (descrição)</h1>
@@ -83,26 +71,43 @@
                             </div>
                         </div>
 
-                        <div class="row mt-5">
+        
+
+                        
+                    </div>
+
+                    <div class="container">
+                        <div class="row mt-3">
                             <div class="col-md-12">
-                                <div class="form-group">
-                                    <textarea name="" id="" cols="60" rows="5" class="form-control"
-                                        placeholder="Descreva o local de instalação"></textarea>
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-12">
+
+                                            <textarea name="" id="" cols="60" rows="5" class="form-control"
+                                                placeholder="Descreva o local de instalação"></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="container mt-3">
                         <div class="row">
-                            <div class="col-md-12 col-12">
-                                <button class="btn btn-success">Enviar</button>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <button class="btn btn-success">Enviar</button>
+                                    </div>
+                                </div>
+    
                             </div>
                         </div>
 
-
                     </div>
+                </form>
             </div>
-            </form>
         </div>
-    </div>
     </div>
 @stop
