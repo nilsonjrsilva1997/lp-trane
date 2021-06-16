@@ -20,11 +20,11 @@
       <div class="col-md-12 col-12 d-flex justify-content-center">
          <form class="mt-3">
             <div class="form-group">
-               <input type="email" class="form-control form-control-sm cep" id="exampleInputEmail1"
+               <input type="email" class="form-control cep" id="exampleInputEmail1"
                   aria-describedby="emailHelp" placeholder="CEP">
             </div>
             <div class="form-group">
-               <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
+               <input type="email" class="form-control" id="exampleInputEmail1"
                   aria-describedby="emailHelp" placeholder="Raio">
             </div>
             <div class="d-flex justify-content-center">
@@ -266,10 +266,10 @@
                                 
                                 <div class="col-md-6 col-12 p-3">
                                 <h2 class="card-title">Fulaninho de tal</h2>
-                              <p class="card-text">
+                              <p class="card-text text-silver">
                                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                               </p>
-                              <p class="card-text text-silver">
+                              <p class="card-text">
                               <div class="estrelas">
                                  Avaliações 
                                  <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
