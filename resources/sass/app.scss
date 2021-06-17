@@ -6,7 +6,6 @@
 @import '~bootstrap/scss/bootstrap';
 body {
     font-size: 1rem;
-    overflow-x: hidden;
 }
 
 .w-20 {
@@ -124,4 +123,8 @@ a {
 
 .text-results-1 {
     color: #333F4B
+}
+
+.base-container {
+    overflow-x: hidden;
 }

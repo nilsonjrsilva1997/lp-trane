@@ -24,7 +24,10 @@
     margin-right: 40px;
 "><img src={{ url('storage/images/logo-trane-color.svg') }} alt="" class="img-fluid">
             </div>
-            @yield('content')
+
+            <div class="container base-container">
+                @yield('content')
+            </div>
 
         </div>
 
