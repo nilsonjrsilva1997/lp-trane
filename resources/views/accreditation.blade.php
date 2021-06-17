@@ -7,7 +7,7 @@
         <div class="row mb-5">
             <div class="col-md-7 col-12 d-flex justify-content-center">
                 <section id="sectionMap">
-                    <embed id="E" src={{ url('storage/images/map.svg') }} type="image/svg+xml">
+                    <embed id="E" src={{ url('storage/images/map.svg') }} type="image/svg+xml" class="img-fluid">
                     <p id="nome_estado"></p>
                     <p id="capital_estado"></p>
                 </section>
@@ -30,17 +30,10 @@
             </div>
         </div>
 
-        <div class="row" style="
-                                                    border-top: 1px #d2d2d2 solid;
-                                                    padding-top: 50px;">
+        <div class="row results">
             <div class="col-md-12 col-12 ml-4 text-left">
-                <p class="text-left" style="
-                                                                color: #333F4B;
-                                                                ">Resultados para CEP 11111-111 em um raio de 10km</p>
-                <h1 class="text-title text-left" style="
-                                                                font-size: 27px;
-                                                                margin-bottom: 30px;
-                                                                ">Encontramos 12 técnicos na sua região</h1>
+                <p class="text-left text-results-1">Resultados para CEP 11111-111 em um raio de 10km</p>
+                <h1 class="text-title text-left text-results" >Encontramos 12 técnicos na sua região</h1>
             </div>
         </div>
 
@@ -459,7 +452,6 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card w-100">
-
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <div class="d-flex justify-content-start p-3">
@@ -469,7 +461,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6 col-12 p-3">
+                                        <div class="col-md-6 col-12">
                                             <h2 class="card-title">Fulaninho de tal</h2>
                                             <p class="card-text text-silver">
                                                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -609,23 +601,11 @@
                     this.style.fill = '#FF2B00';
                     var siglaEstado = this.parentNode.id;
 
-                    $('#nome_estado').html('<img src="bandeiras/' + siglaEstado +
-                        '.png" alt="" width="20" height="14" />' + objEstado[siglaEstado][0].state).css({
-                        top: y,
-                        left: x,
-                        padding: '0 0.6em',
-                        border: '2px solid white',
-                        boxShadow: '4px 4px 6px #444'
+                    $('#nome_estado').html('<h1 class="text-title">' + objEstado[siglaEstado][0].state + "</h1>").css({                        
                     });
 
-                    $('#capital_estado').html('Número de técnicos: ' + objEstado[siglaEstado][0].number_technician)
-                        .css({
-                            top: y + 25,
-                            left: x,
-                            padding: '0 0.6em',
-                            border: '2px solid white',
-                            boxShadow: '4px 4px 6px #444'
-                        });
+                    $('#capital_estado').html('<h1 class="text-title">Número de técnicos: ' + objEstado[siglaEstado][0].number_technician + "</h1>")
+                        .css({});
                 }
                 estados[i].onmouseout = function() {
                     var fillColor = this.getAttribute('fill');

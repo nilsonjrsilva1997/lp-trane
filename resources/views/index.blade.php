@@ -69,5 +69,6 @@
 
     <script>
         $('#modalWelcome').modal('show');
+
     </script>
 @stop

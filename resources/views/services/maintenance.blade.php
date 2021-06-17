@@ -70,12 +70,7 @@
                                 </div>
                             </div>
                         </div>
-
-        
-
-                        
                     </div>
-
                     <div class="container">
                         <div class="row mt-3">
                             <div class="col-md-12">
@@ -101,7 +96,7 @@
                                         <button class="btn btn-success">Enviar</button>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
 
