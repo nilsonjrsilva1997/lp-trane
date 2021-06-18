@@ -433,8 +433,8 @@
     </div>
 
     <div class="modal" tabindex="-1" role="dialog" id="serviceOptions">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content modal-message">
+        <div class="modal-dialog modal-dialog-message modal-lg" role="document">
+            <div class="modal-content modal-message modal-content-message">
                 <div class="modal-header">
                     <div>
                         <img src={{ url('storage/images/logo-trane-color.svg') }} alt=""

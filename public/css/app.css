@@ -10003,7 +10003,7 @@ h3 {
   }
 }
 body {
-  font-size: 1rem;
+  font-size: 17px;
 }
 
 .w-20 {
@@ -10132,10 +10132,10 @@ a {
   font-size: 2rem;
 }
 
-.modal-dialog {
+.modal-dialog-message {
   height: 600px !important;
 }
 
-.modal-content {
+.modal-content-message {
   height: 120% !important;
 }
