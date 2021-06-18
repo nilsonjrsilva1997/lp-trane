@@ -10131,11 +10131,3 @@ a {
 .fa-upload {
   font-size: 2rem;
 }
-
-.modal-dialog-message {
-  height: 600px !important;
-}
-
-.modal-content-message {
-  height: 120% !important;
-}
