@@ -586,7 +586,116 @@
     </script>
     <script>
         async function init() {
-            var objEstado = await $.get('http://localhost:5001/tecnicos_regiao');
+            var objEstado = {
+        "ac": [{
+            "state": "Acre",
+            "number_technician": 20
+        }],
+        "al": [{
+            "state": "Alagoas",
+            "number_technician": 50
+        }],
+        "ap": [{
+            "state": "Amapá",
+            "number_technician": 20
+        }],
+        "am": [{
+            "state": "Amazonas",
+            "number_technician": 20
+        }],
+        "ba": [{
+            "state": "Bahia",
+            "number_technician": 20
+        }],
+        "ce": [{
+            "state": "Ceará",
+            "number_technician": 20
+        }],
+        "df": [{
+            "state": "Distrito Federal",
+            "number_technician": 20
+        }],
+        "es": [{
+            "state": "Espírito Santo",
+            "number_technician": 20
+        }],
+        "go": [{
+            "state": "Goiás",
+            "number_technician": 20
+        }],
+        "ma": [{
+            "state": "Maranhão",
+            "number_technician": 20
+        }],
+        "mt": [{
+            "state": "Mato Grosso",
+            "number_technician": 20
+        }],
+        "ms": [{
+            "state": "Mato Grosso do Sul",
+            "number_technician": 20
+        }],
+        "mg": [{
+            "state": "Minas Gerais",
+            "number_technician": 20
+        }],
+        "pr": [{
+            "state": "Paraná",
+            "number_technician": 20
+        }],
+        "pb": [{
+            "state": "Paraíba",
+            "number_technician": 20
+        }],
+        "pa": [{
+            "state": "Pará",
+            "number_technician": 20
+        }],
+        "pe": [{
+            "state": "Pernambuco",
+            "number_technician": 20
+        }],
+        "pi": [{
+            "state": "Piauí",
+            "number_technician": 12
+        }],
+        "rj": [{
+            "state": "Rio de Janeiro",
+            "number_technician": 12
+        }],
+        "rn": [{
+            "state": "Rio Grande do Norte",
+            "number_technician": 12
+        }],
+        "rs": [{
+            "state": "Rio Grande do Sul",
+            "number_technician": 12
+        }],
+        "ro": [{
+            "state": "Rondônia",
+            "number_technician": 12
+        }],
+        "rr": [{
+            "state": "Roraima",
+            "number_technician": 12
+        }],
+        "sc": [{
+            "state": "Santa Catarina",
+            "number_technician": 12
+        }],
+        "se": [{
+            "state": "Sergipe",
+            "number_technician": 12
+        }],
+        "sp": [{
+            "state": "São Paulo",
+            "number_technician": 12
+        }],
+        "to": [{
+            "state": "Tocantins",
+            "number_technician": 12
+        }]
+    };
 
             var msg = document.getElementById('msg');
             var D = document.getElementById('E');
