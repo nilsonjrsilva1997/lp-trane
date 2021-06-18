@@ -133,14 +133,10 @@ a {
     font-size: 2rem;
 }
 
-.modal-dialog,
-.modal-content {
-    /* 80% of window height */
-    height: 80%;
+.modal-dialog {
+    height: 600px !important;
 }
 
-.modal-body {
-    /* 100% = dialog height, 120px = header + footer */
-    max-height: calc(100% - 120px);
-    overflow-y: scroll;
+.modal-content {
+    height: 80%!important;
 }
