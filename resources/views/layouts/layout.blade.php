@@ -34,7 +34,7 @@
         <div class="d-flex justify-content-center w-100 h-12 text-center">
             <div class="bar-logo d-flex justify-content-end w-100 py-2">
                 <a href="https://www.trane.com/commercial/latin-america/br/pt.html" target="_blank">
-                    <img src={{ url('storage/images/logo-trane-without-color.svg') }} alt="" class="px-3"
+                    <img src={{ url('storage/images/logo-trane-without-color.svg') }} alt="" class="w-100 p-3"
                         data-toggle="tooltip" data-placement="top" title="Conheça a Trane" role="button" style="
         max-width: 160px;
     ">

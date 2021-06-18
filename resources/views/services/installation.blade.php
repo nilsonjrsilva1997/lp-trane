@@ -4,109 +4,38 @@
 @stop
 @section('content')
 
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div style="position:relative;" class="p-3">
+                <h1 class="text-title">Local de instalação</h1>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
-        <div class="col-md-12 col-12 text-center mt-5">
-            <h1 class="text-title">Local de instalação (descrição)</h1>
+        <div class="col-md-12">
+            <div style="position:relative;" class="p-3">
+                <textarea name="" id="" cols="60" rows="10" class="form-control"
+                    placeholder="Descrição do local de instalação"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div style="position:relative;" class="p-3">
+                <a class='btn btn-secondary w-100 h-75 d-flex justify-content-center align-items-center' href='javascript:;'>
+                    <i class="fas fa-upload"></i>
+                    <input type="file" class="input-file" name="file_source" size="40"
+                        onchange='$("#upload-file-info").html($(this).val());'>
+                </a>
+                <span class='label label-info' id="upload-file-info"></span>
+            </div>
         </div>
 
-        <div class="d-flex justify-content-center text-center">
-            <div class="col-md-6 col-12">
-                <form>
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-md-6 col-12">
-                                <div style="position:relative;" class="p-1 w-100">
-                                    <a class='btn btn-primary' href='javascript:;'>
-                                        Escolher arquivo
-                                        <input type="file" class="input-file" name="file_source" size="40"
-                                            onchange='$("#upload-file-info").html($(this).val());'>
-                                    </a>
-                                    &nbsp;
-                                    <span class='label label-info' id="upload-file-info"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div style="position:relative;" class="p-1">
-                                    <a class='btn btn-primary' href='javascript:;'>
-                                        Escolher arquivo
-                                        <input type="file" class="input-file" name="file_source" size="40"
-                                            onchange='$("#upload-file-info").html($(this).val());'>
-                                    </a>
-                                    &nbsp;
-                                    <span class='label label-info' id="upload-file-info"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div style="position:relative;" class="p-1">
-                                    <a class='btn btn-primary' href='javascript:;'>
-                                        Escolher arquivo
-                                        <input type="file" class="input-file" name="file_source" size="40"
-                                            onchange='$("#upload-file-info").html($(this).val());'>
-                                    </a>
-                                    &nbsp;
-                                    <span class='label label-info' id="upload-file-info"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div style="position:relative;" class="p-1">
-                                    <a class='btn btn-primary' href='javascript:;'>
-                                        Escolher arquivo
-                                        <input type="file" class="input-file" name="file_source" size="40"
-                                            onchange='$("#upload-file-info").html($(this).val());'>
-                                    </a>
-                                    &nbsp;
-                                    <span class='label label-info' id="upload-file-info"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12">
-                                <div style="position:relative;" class="p-1">
-                                    <a class='btn btn-primary' href='javascript:;'>
-                                        Escolher arquivo
-                                        <input type="file" class="input-file" name="file_source" size="40"
-                                            onchange='$("#upload-file-info").html($(this).val());'>
-                                    </a>
-                                    &nbsp;
-                                    <span class='label label-info' id="upload-file-info"></span>
-                                </div>
-                            </div>
-                        </div>
-
-        
-
-                        
-                    </div>
-
-                    <div class="container">
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <div class="container">
-
-                                    <div class="row">
-                                        <div class="col-md-12 col-12">
-
-                                            <textarea name="" id="" cols="60" rows="5" class="form-control"
-                                                placeholder="Descreva o local de instalação"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container mt-3">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-12 col-12">
-                                        <button class="btn btn-success">Enviar</button>
-                                    </div>
-                                </div>
-    
-                            </div>
-                        </div>
-
-                    </div>
-                </form>
+        <div class="col-md-6 col-12">
+            <div style="position:relative;" class="p-3">
+                <button class="btn btn-success w-100 h-75">Enviar</button>
             </div>
         </div>
     </div>

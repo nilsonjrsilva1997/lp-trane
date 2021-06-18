@@ -10123,3 +10123,16 @@ a {
 .text-results-1 {
   color: #333F4B;
 }
+
+.base-container {
+  overflow-x: hidden;
+}
+
+.fa-upload {
+  font-size: 2rem;
+}
+
+.svg {
+  height: auto;
+  width: 100%;
+}

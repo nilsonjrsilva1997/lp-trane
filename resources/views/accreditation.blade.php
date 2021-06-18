@@ -6,8 +6,8 @@
     <div class="container mt-5 mb-5">
         <div class="row mb-5">
             <div class="col-md-7 col-12 d-flex justify-content-center">
-                <section id="sectionMap">
-                    <embed id="E" src={{ url('storage/images/map.svg') }} type="image/svg+xml" class="img-fluid">
+                <section id="sectionMap" class="">
+                    <embed id="E" src={{ url('storage/images/map.svg') }} type="image/svg+xml" class="svg">
                     <p id="nome_estado"></p>
                     <p id="capital_estado"></p>
                 </section>
@@ -462,13 +462,13 @@
                                         </div>
 
                                         <div class="col-md-6 col-12">
-                                            <h2 class="card-title">Fulaninho de tal</h2>
-                                            <p class="card-text text-silver">
+                                            <h2 class="card-title p-3">Fulaninho de tal</h2>
+                                            <p class="card-text text-silver p-3">
                                                 Lorem Ipsum is simply dummy text of the printing and typesetting
                                                 industry.
                                             </p>
                                             <p class="card-text">
-                                            <div class="estrelas">
+                                            <div class="estrelas p-3">
                                                 Avaliações
                                                 <input type="radio" id="cm_star-empty" name="fb" value="" checked />
                                                 <label for="cm_star-1"><i class="fa"></i></label>
@@ -483,9 +483,11 @@
                                                 <input type="radio" id="cm_star-5" name="fb" value="5" />
                                             </div>
                                             </p>
-                                            <a href="#" class="btn btn-success">
-                                                <i class="fa fa-whatsapp"></i>
-                                                (13) 99111-5566</a>
+                                            <div class="p-3">
+                                                <a href="#" class="btn btn-success">
+                                                    <i class="fa fa-whatsapp"></i>
+                                                    (13) 99111-5566</a>
+                                            </div>
                                         </div>
 
                                     </div>
