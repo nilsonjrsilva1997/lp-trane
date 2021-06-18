@@ -12,7 +12,7 @@
                     <p id="capital_estado"></p>
                 </section>
             </div>
-            <div class="col-md-5 col-12 justify-content-center d-flex flex-column pl-5">
+            <div class="col-md-5 col-12 justify-content-center">
                 <h1 class="text-title">Encontre um credenciado no seu estado</h1>
                 <form class="mt-3">
                     <div class="form-group">
