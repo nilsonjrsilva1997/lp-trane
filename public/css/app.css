@@ -10132,11 +10132,10 @@ a {
   font-size: 2rem;
 }
 
-.svg {
-  height: auto;
-  width: 100%;
+.modal-dialog {
+  height: 600px !important;
 }
 
-.modal-message {
-  height: 100% !important;
+.modal-content {
+  height: 80% !important;
 }
