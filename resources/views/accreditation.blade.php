@@ -31,7 +31,7 @@
         </div>
 
         <div class="row results">
-            <div class="col-md-12 col-12 ml-4 text-left">
+            <div class="col-md-12 col-12 text-left">
                 <p class="text-left text-results-1">Resultados para CEP 11111-111 em um raio de 10km</p>
                 <h1 class="text-title text-left text-results" >Encontramos 12 técnicos na sua região</h1>
             </div>
