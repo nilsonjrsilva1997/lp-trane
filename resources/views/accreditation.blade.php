@@ -7,7 +7,7 @@
         <div class="row mb-5">
             <div class="col-md-7 col-12 d-flex justify-content-center">
                 <section id="sectionMap" class="">
-                    <embed id="E" src={{ url('storage/images/map.svg') }} type="image/svg+xml" class="svg">
+                    <embed id="E" src={{ url('storage/images/map.svg') }} type="image/svg+xml">
                     <p id="nome_estado"></p>
                     <p id="capital_estado"></p>
                 </section>
