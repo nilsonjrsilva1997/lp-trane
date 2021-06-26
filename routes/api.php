@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+
+Route::group(['middleware' => 'api'], function() {
+    Route::prefix('technician')->group(function () {
+        Route::post('/search/by_location', [\App\Http\Controllers\TechnicianController::class, 'searchByLocation']);
+    });
+
+    Route::prefix('technician')->group(function () {
+        Route::get('/numbers', [\App\Http\Controllers\CertificateUserController::class, 'mapData']);
+    });
+
+    Route::prefix('installation')->group(function () {
+        Route::post('create/', [\App\Http\Controllers\InstallationController::class, 'create']);
+    });
 });
+

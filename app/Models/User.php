@@ -2,42 +2,57 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\UserCertificate;
+use App\Models\State;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'usu_id',
+        'usu_name',
+        'usu_email',
+        'usu_password',
+        'usu_cpf',
+        'usu_birthdate',
+        'usu_token',
+        'usu_token_expiration',
+        'usu_date_created',
+        'usu_date_updated',
+        'usu_status',
+        'usu_token_password',
+        'usu_email_signup',
+        'usu_newsletter',
+        'usu_flag_password',
+        'usu_logo',
+        'usu_cep',
+        'usu_latitude',
+        'usu_longitude',
+        'usu_geocode', 
+        'usu_state_id',
+        'usu_city_id',
+        'usu_validate_cep',
+        'usu_cnpj',
+        'usu_phone',
+        'usu_last_login'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'usu_password',
+        'usu_token',
+        'usu_token_password'
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $table = 'tb_users';
+
+    public function certificate()
+    {
+        return $this->hasOne(UserCertificate::class, 'certuser_user_id', 'usu_id');
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'usu_state_id', 'state_id');
+    }
 }

@@ -32,3 +32,14 @@ Route::prefix('atividades')->group(function () {
         return view('services.maintenance');
     });
 });
+
+
+
+Route::prefix('technician')->group(function () {
+    Route::post('/search', [\App\Http\Controllers\TechnicianController::class, 'searchTechnician']);
+});
+
+Route::prefix('images')->group(function () {
+    Route::get('/{image}', [\App\Http\Controllers\ImageController::class, 'show']);
+});
+
