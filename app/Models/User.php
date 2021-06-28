@@ -6,9 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\UserCertificate;
 use App\Models\State;
+use App\Models\MaintenanceInstallation;
 
 class User extends Model
 {
+
+    protected $connection = 'mysql';
+
     protected $fillable = [
         'usu_id',
         'usu_name',
@@ -54,5 +58,10 @@ class User extends Model
     public function state()
     {
         return $this->belongsTo(State::class, 'usu_state_id', 'state_id');
+    }
+
+    public function maintenance_or_installations()
+    {
+        return $this->hasMany(MaintenanceInstallation::class, 'usu_id', 'usu_id');
     }
 }

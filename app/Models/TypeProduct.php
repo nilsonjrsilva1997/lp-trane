@@ -9,6 +9,8 @@ class TypeProduct extends Model
 {
     use HasFactory;
 
+    protected $connection= 'mysql';
+
     protected $fillable = [
         'type_id', 
         'type_name', 

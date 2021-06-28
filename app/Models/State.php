@@ -10,6 +10,8 @@ class State extends Model
 {
     use HasFactory;
 
+    protected $connection= 'mysql';
+
     protected $fillable = ['state_id', 'state_country_id', 'state_code', 'state_name', 'state_active'];
 
     protected $table = 'tb_states';

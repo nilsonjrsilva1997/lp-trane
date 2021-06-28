@@ -10,6 +10,8 @@ class UserCertificate extends Model
 {
     use HasFactory;
 
+    protected $connection= 'mysql';
+
     protected $fillable = [
         'certuser_id', 
         'certuser_cert_id', 

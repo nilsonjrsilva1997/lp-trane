@@ -10166,3 +10166,33 @@ body.loading .modal-loading {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.area-upload {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+}
+
+.area-upload label.label-upload {
+  border: 2px dashed #0d8acd;
+  min-height: 200px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #0d8acd;
+  position: relative;
+  transition: 0.3s all;
+}
+
+.area-upload label.label-upload.highlight {
+  background-color: #fffdaa;
+}
+
+.area-upload label.label-upload * {
+  pointer-events: none;
+}

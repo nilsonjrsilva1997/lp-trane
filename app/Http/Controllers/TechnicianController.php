@@ -75,6 +75,7 @@ class TechnicianController extends Controller
             'tb_users.usu_id')
             ->where(['tb_user_certificates.certuser_status' => 'approved'])
             ->whereRaw("tb_user_certificates.certuser_date_expiration > '" . Carbon::today() . "'")
+            ->limit(5)
             ->get();
 
           return $technicians;

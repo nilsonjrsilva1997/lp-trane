@@ -28,12 +28,13 @@
 
                     </div>
 
-                    <div class="form-check">
+                    {{-- <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkLocation">
                         <label class="form-check-label" for="checkLocation">
                             Usar minha localização
                         </label>
-                    </div>
+                    </div> --}}
+                    
                     <div class="pt-3">
                         <button id="btnSearchTechnician" class="btn btn-primary btn-block">Procurar</button>
                     </div>
@@ -46,13 +47,8 @@
         <div class="row results" id="messageResults">
 
         </div>
-        
-            <div class="row" id="containerTechnician"></div>
-            
-          
 
-
-
+        <div class="row" id="containerTechnician"></div>
 
         <div class="modal" tabindex="-1" role="dialog" id="serviceOptions">
             <div class="modal-dialog modal-dialog-message modal-lg" role="document">
@@ -67,6 +63,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                        <div id="user_data"></div>
                         <h1 class="modal-title text-title text-center">
                             Atividades
                         </h1>
@@ -74,7 +71,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="card w-100">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -117,63 +114,21 @@
         </div>
     </div>
 
-    <div class="modal-loading"></div>
-
     <script>
         $(document).on('click', '.img-open-modal', function() {
+            localStorage.setItem("usu_id", $(this)[0].id);
             $('#serviceOptions').modal('show');
         });
-
     </script>
     <script>
         $(document).ready(function() {
             $('.cep').mask('00000-000')
         });
-
     </script>
-    <script>
-        $(document).ready(function() {
-            const $technicianContainer = $('#technicianContainer');
 
-            const createCard = (technician) => {
-                const imgEl = document.createElement('img');
-                imgEl.classList.add('rounded-circle');
-                imgEl.classList.add('z-depth-2');
-                imgEl.classList.add('img-responsive');
-                imgEl.classList.add('p-1');
-                imgEl.classList.add('img-full');
-                imgEl.classList.add('technician');
-                imgEl.setAttribute('alt', "")
-                imgEl.setAttribute('data-holder-rendered', "true")
-
-                imgEl.src = technician.photo
-
-                return imgEl;
-            }
-
-            $.ajax({
-                url: "http://localhost:5001/tecnicos",
-                method: "GET",
-                success: (technicians) => {
-                    technicians.forEach(technician => {
-                        const card = createCard(technician);
-                        // $technicianContainer.append(card);
-                    });
-                }
-            })
-        });
-
-    </script>
-    <script type="text/javascript">
-        window.jQuery || document.write('<script src="scripts/jquery-1.7.2.min.js"><\/script>');
-
-    </script>
     <script>
         async function init() {
             var objEstado = await Promise.resolve($.get('/api/technician/numbers/'));
-
-            console.log(objEstado);
-
             var msg = document.getElementById('msg');
             var D = document.getElementById('E');
             SVGDoc = D.getSVGDocument();
@@ -212,7 +167,6 @@
             }
         }
         window.addEventListener("load", init, false);
-
     </script>
 
     <script>
@@ -302,6 +256,8 @@
                         'cep_ou_local': 'CEP'
                     };
 
+                    localStorage.setItem("zip_code", zipCode.val());
+
                     $.ajax({
                         url: '/api/technician/search/by_location',
                         method: 'POST',
@@ -321,18 +277,21 @@
                                 var phone = '';
                                 var phoneLink = '';
 
-                                if(data[i].usu_logo === null) {
-                                    srcImage = `https://scontent-gru2-1.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeEZyILZuVe3bjGi75E2bwrzso2H55p0AlGyjYfnmnQCUfPvdVtza2vJZsaEqlJcJV6yvbp2x6F3qvKy42Kooc5V&_nc_ohc=fVddfNcjRZkAX_9WWWE&_nc_ht=scontent-gru2-1.xx&oh=0ff524be16a82edb60ade21ec53e1cdd&oe=60DA1B38`;
+                                if (data[i].usu_logo === null) {
+                                    srcImage =
+                                        `https://scontent-gru2-1.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeEZyILZuVe3bjGi75E2bwrzso2H55p0AlGyjYfnmnQCUfPvdVtza2vJZsaEqlJcJV6yvbp2x6F3qvKy42Kooc5V&_nc_ohc=fVddfNcjRZkAX_9WWWE&_nc_ht=scontent-gru2-1.xx&oh=0ff524be16a82edb60ade21ec53e1cdd&oe=60DA1B38`;
                                 } else {
                                     srcImage = `/images/${data[i].usu_logo}`;
                                 }
 
-                                
-                                if(data[i].usu_phone == null) {                            
+
+                                if (data[i].usu_phone == null) {
                                     phoneLink = '#';
                                 } else {
-                                    phone = data[i].usu_phone.replace('(' , "").replace(')', '').replace('-', '');
-                                    phoneLink = `https://api.whatsapp.com/send?phone=55${phone}&text=Olá%20${data[i].usu_name},%20te%20vi%20na%20pagina%20da%20Trane,%20gostaria%20de%20um%20orçamento.`;
+                                    phone = data[i].usu_phone.replace('(', "").replace(')', '').replace(
+                                        '-', '');
+                                    phoneLink =
+                                        `https://api.whatsapp.com/send?phone=55${phone}&text=Olá%20${data[i].usu_name},%20te%20vi%20na%20pagina%20da%20Trane,%20gostaria%20de%20um%20orçamento.`;
                                 }
 
                                 htmlCards += `<div class="col-md-4 col-12 d-flex justify-content-center mt-3">
@@ -365,7 +324,7 @@
                                                                                 <div class="col-2">
                                                                                     <a href="https://google.com.br" target="_blank">
                                                                                         <i class="fas fa-file-download"></i>
-                                                                                    </a>ssssss
+                                                                                    </a>
                                                                                 </div>
                                                                             </div>
                                                                         </li>
@@ -373,13 +332,12 @@
                                                                     <div class="card-body">
                                                                         <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
                                                                         <a target="_blank" href="${phoneLink}" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                                                                        <a href="#tecnicos" class="card-link img-open-modal"><i class="fas fa-briefcase"></i> Contratar</a>
-                                                                    </div>ss
+                                                                        <a href="#tecnicos" class="card-link img-open-modal" id="${data[i].usu_id}"><i class="fas fa-briefcase"></i> Contratar</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>`;
                             }
                             $('#containerTechnician').html(htmlCards);
-
 
                             window.location.href = '#tecnicos';
                         }
@@ -391,143 +349,6 @@
 
             }
         });
-
-        function constructCards() {
-            //             <div class="row">
-
-            // <div class="col-md-4 col-12 d-flex justify-content-center">
-            //     <div class="card img-open-modal" style="/* width: 18rem; */">
-            //         <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
-            //         <div class="card-body">
-            //             <h5 class="card-title">Nilson Junior</h5>
-
-            //             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-            //                 the card's content.</p>
-            //         </div>
-            //         <ul class="list-group list-group-flush">
-            //             <li class="list-group-item" role="button">
-            //                 <div class="row">
-            //                     <div class="col">
-            //                         <i class="far fa-file-alt"></i> Certificado Trane
-            //                     </div>
-            //                     <div class="col-2">
-            //                         <a href="https://google.com.br" target="_blank">
-            //                             <i class="fas fa-file-download"></i>
-            //                         </a>
-            //                     </div>
-            //                 </div>
-            //             </li>
-            //             <li class="list-group-item" role="button">
-            //                 <div class="row">
-            //                     <div class="col">
-            //                         <i class="far fa-file-alt"></i> Especialista em Split
-            //                     </div>
-            //                     <div class="col-2">
-            //                         <a href="https://google.com.br" target="_blank">
-            //                             <i class="fas fa-file-download"></i>
-            //                         </a>
-            //                     </div>
-            //                 </div>
-            //             </li>
-            //         </ul>
-            //         <div class="card-body">
-            //             <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
-            //             <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            //             <a href="" class="img-open-modal"><i class="fas fa-briefcase"></i></a>
-            //         </div>
-            //     </div>
-            // </div>
-
-            // <div class="col-md-4 col-12 d-flex justify-content-center">
-            //     <div class="card img-open-modal" style="/* width: 18rem; */">
-            //         <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
-            //         <div class="card-body">
-            //             <h5 class="card-title">Nilson Junior</h5>
-
-            //             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-            //                 the card's content.</p>
-            //         </div>
-            //         <ul class="list-group list-group-flush">
-            //             <li class="list-group-item" role="button">
-            //                 <div class="row">
-            //                     <div class="col">
-            //                         <i class="far fa-file-alt"></i> Certificado Trane
-            //                     </div>
-            //                     <div class="col-2">
-            //                         <a href="https://google.com.br" target="_blank">
-            //                             <i class="fas fa-file-download"></i>
-            //                         </a>
-            //                     </div>
-            //                 </div>
-            //             </li>
-            //             <li class="list-group-item" role="button">
-            //                 <div class="row">
-            //                     <div class="col">
-            //                         <i class="far fa-file-alt"></i> Especialista em Split
-            //                     </div>
-            //                     <div class="col-2">
-            //                         <a href="https://google.com.br" target="_blank">
-            //                             <i class="fas fa-file-download"></i>
-            //                         </a>
-            //                     </div>
-            //                 </div>
-            //             </li>
-            //         </ul>
-            //         <div class="card-body">
-            //             <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
-            //             <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            //             <a href="" class="img-open-modal"><i class="fas fa-briefcase"></i></a>
-            //         </div>
-            //     </div>
-            // </div>
-
-            // <div class="col-md-4 col-12 d-flex justify-content-center">
-            //     <div class="card img-open-modal" style="/* width: 18rem; */">
-            //         <img class="card-img-top image" src="https://source.unsplash.com/random" alt="Card image cap">
-            //         <div class="card-body">
-            //             <h5 class="card-title">Nilson Junior</h5>
-
-            //             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-            //                 the card's content.</p>
-            //         </div>
-            //         <ul class="list-group list-group-flush">
-            //             <li class="list-group-item" role="button">
-            //                 <div class="row">
-            //                     <div class="col">
-            //                         <i class="far fa-file-alt"></i> Certificado Trane
-            //                     </div>
-            //                     <div class="col-2">
-            //                         <a href="https://google.com.br" target="_blank">
-            //                             <i class="fas fa-file-download"></i>
-            //                         </a>
-            //                     </div>
-            //                 </div>
-            //             </li>
-            //             <li class="list-group-item" role="button">
-            //                 <div class="row">
-            //                     <div class="col">
-            //                         <i class="far fa-file-alt"></i> Especialista em Split
-            //                     </div>
-            //                     <div class="col-2">
-            //                         <a href="https://google.com.br" target="_blank">
-            //                             <i class="fas fa-file-download"></i>
-            //                         </a>
-            //                     </div>
-            //                 </div>
-            //             </li>
-            //         </ul>
-            //         <div class="card-body">
-            //             <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
-            //             <a href="#" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            //             <a href="" class="img-open-modal"><i class="fas fa-briefcase"></i></a>
-            //         </div>
-            //     </div>
-            // </div>
-
-
-            // </div>
-        }
-
     </script>
 
     <script>
@@ -546,21 +367,6 @@
                 $('#radius').val('');
             }
         });
-
-    </script>
-
-    <script>
-        $body = $("body");
-
-        $(document).on({
-            ajaxStart: function() {
-                $body.addClass("loading");
-            },
-            ajaxStop: function() {
-                $body.removeClass("loading");
-            }
-        });
-
     </script>
 
 

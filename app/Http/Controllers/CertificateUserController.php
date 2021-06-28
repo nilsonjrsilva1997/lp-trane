@@ -13,8 +13,6 @@ class CertificateUserController extends Controller
         $states = State::all();
         $response = [];
 
-        
-
         foreach($states as $state) {
 
             $number = UserCertificate::where(['certuser_status' => 'approved'])
@@ -29,12 +27,5 @@ class CertificateUserController extends Controller
             ]];        
         }
         return $response;
-        // selecionando estados do banco
-
-
-        
-        
-
-        
     }
 }
