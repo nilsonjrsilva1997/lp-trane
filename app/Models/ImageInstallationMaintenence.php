@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\ImagesInstall;
+use App\Models\ImageInstall;
 use App\Models\MaintenanceInstallation;
 
 class ImageInstallationMaintenence extends Model
@@ -22,7 +22,7 @@ class ImageInstallationMaintenence extends Model
 
     public function images()
     {
-        return $this->belongsTo(ImagesInstall::class, 'image_id', 'id');
+        return $this->belongsTo(ImageInstall::class, 'image_id', 'id');
     }
 
     public function maintenance_installations()

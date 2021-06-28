@@ -82,7 +82,7 @@
                                                 class="btn btn-secondary">Instalação</button></a>
                                     </p>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Clique aqui para agendar sua visita de Instalação
                                     </p>
                                 </div>
                                 <div class="col-md-4 col-12">
@@ -91,7 +91,7 @@
                                                 class="btn btn-secondary">Manutenção</button></a>
                                     </p>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Clique aqui para agendar sua visita de Manutenção
                                     </p>
                                 </div>
                                 <div class="col-md-4 col-12">
@@ -100,7 +100,7 @@
                                                 class="btn btn-secondary">Garantia Trane</button></a>
                                     </p>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Clique aqui para agendar sua visita de Garantia
                                     </p>
                                 </div>
                             </div>
@@ -173,60 +173,55 @@
         $('#btnSearchTechnician').click(function(e) {
             e.preventDefault();
 
-            if ($('#checkLocation')[0].checked) {
-                if ('geolocation' in navigator) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        var radius = $('#radius');
-                        var errorMessage = $('.error-message-radius');
+            // if ($('#checkLocation')[0].checked) {
+            //     if ('geolocation' in navigator) {
+            //         navigator.geolocation.getCurrentPosition(function(position) {
+            //             var radius = $('#radius');
+            //             var errorMessage = $('.error-message-radius');
 
-                        if (radius.val() == "") {
-                            radius.addClass('is-invalid');
-                            errorMessage.html(`
-                                                        <p class="help-danger">O campo raio é obrigatório</p>
-                                                    `);
+            //             if (radius.val() == "") {
+            //                 radius.addClass('is-invalid');
+            //                 errorMessage.html(`<p class="help-danger">O campo raio é obrigatório</p>`);
+            //                 return;
+            //             } else {
+            //                 radius.removeClass('is-invalid');
+            //                 errorMessage.html(`<p class=""></p>`);
+            //             }
 
-                            return;
-                        } else {
-                            radius.removeClass('is-invalid');
-                            errorMessage.html(`
-                                                        <p class=""></p>
-                                                    `);
-                        }
+            //             var latitude = position.coords.latitude;
+            //             var longitude = position.coords.longitude;
 
-                        var latitude = position.coords.latitude;
-                        var longitude = position.coords.longitude;
+            //             var data = {
+            //                 'latitude': position.coords.latitude,
+            //                 'longitude': position.coords.longitude,
+            //                 'radius': 10,
+            //                 'cep_ou_local': 'LOCAL'
+            //             };
 
-                        var data = {
-                            'latitude': position.coords.latitude,
-                            'longitude': position.coords.longitude,
-                            'radius': 10,
-                            'cep_ou_local': 'LOCAL'
-                        };
+            //             $.ajax({
+            //                 url: '/api/technician/search/by_location',
+            //                 method: 'POST',
+            //                 data: data,
+            //                 success: function(data) {
+            //                     if (data.length == 0) {
+            //                         $('.text-results')[0].innerText =
+            //                             'Nenhum técnico encontrado';
+            //                     }
 
-                        $.ajax({
-                            url: '/api/technician/search/by_location',
-                            method: 'POST',
-                            data: data,
-                            success: function(data) {
-                                if (data.length == 0) {
-                                    $('.text-results')[0].innerText =
-                                        'Nenhum técnico encontrado';
-                                }
+            //                     window.location.href = '#tecnicos';
+            //                 }
+            //             });
 
-                                window.location.href = '#tecnicos';
-                            }
-                        });
+            //         }, function(error) {
+            //             console.log('Erro ao encontrar a posição');
+            //         });
+            //     } else {
+            //         alert('Não foi possível pegar a localização');
+            //     }
+            //     let $cep = $('#zip_code').val();
 
-                    }, function(error) {
-                        console.log('Erro ao encontrar a posição');
-                    });
-                } else {
-                    alert('Não foi possível pegar a localização');
-                }
-                let $cep = $('#zip_code').val();
-
-                console.log('cep: ' + $cep);
-            } else {
+            //     console.log('cep: ' + $cep);
+            // } else {
                 var radius = $('#radius');
                 var zipCode = $('#zip_code');
                 var errorMessage = $('.error-message-radius');
@@ -329,10 +324,14 @@
                                                                             </div>
                                                                         </li>
                                                                     </ul>
-                                                                    <div class="card-body">
-                                                                        <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
-                                                                        <a target="_blank" href="${phoneLink}" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                                                                        <a href="#tecnicos" class="card-link img-open-modal" id="${data[i].usu_id}"><i class="fas fa-briefcase"></i> Contratar</a>
+                                                                    <div style="padding: 2px">                                                                                                                                                                                                                
+                                                                        
+                                                                                    <a href="#" class="card-link"><i class="fas fa-envelope"></i> E-mail</a>
+                                                                            
+                                                                                    <a target="_blank" href="${phoneLink}" class="card-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                                                                               
+                                                                                    <a href="#tecnicos" class="card-link img-open-modal" id="${data[i].usu_id}"><i class="fas fa-briefcase"></i> Contratar</a>
+                                                                               
                                                                     </div>
                                                                 </div>
                                                             </div>`;
@@ -346,8 +345,7 @@
                 } else {
                     return;
                 }
-
-            }
+            
         });
     </script>
 

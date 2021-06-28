@@ -9,15 +9,17 @@ class MaintenanceInstallationController extends Controller
 {
     public function index()
     {
-        $maintenanceInstallation = MaintenanceInstallation::with('technician')->get();
-        return $maintenanceInstallation;
+        return MaintenanceInstallation::with('technician')
+        ->with('image_maintenance_installations.images')
+        ->get();
     }
 
     public function show($id)
     {
         $maintenanceInstallation = MaintenanceInstallation::with('technician')
-                                                            ->where(['id' => $id])
-                                                            ->first();
+                                    ->where(['id' => $id])
+                                    ->first();
+                                    
         if (!empty($maintenanceInstallation)) {
             return $maintenanceInstallation;
         } else {

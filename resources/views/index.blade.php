@@ -12,7 +12,7 @@
 
         <div class="col-md-6 col-12">
             <a href={{ url('/credenciamentos') }}>
-                <img src={{ url('storage/images/credenciamento1.jpg') }} alt=""
+                <img src={{ url('storage/images/credenciamento1.png') }} alt=""
                     class="img-fluid img-accreditation full p-3 shadow-lg p-3 mb-5 bg-white rounded" data-toggle="tooltip"
                     data-placement="top" title="Credenciamento 1" role="button">
             </a>
@@ -20,7 +20,7 @@
 
         <div class="col-md-6 col-12">
             <a href={{ url('/credenciamentos') }}>
-                <img src={{ url('storage/images/credenciamento2.jpg') }} alt=""
+                <img src={{ url('storage/images/credenciamento2.png') }} alt=""
                     class="img-fluid img-accreditation full p-3 shadow-lg p-3 mb-5 bg-white rounded" data-toggle="tooltip"
                     data-placement="top" title="Credenciamento 2" role="button">
             </a>
@@ -46,33 +46,15 @@
                     </h1>
 
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar
-                        sapien et ligula ullamcorper. Mattis nunc sed blandit libero volutpat.
-                        A diam maecenas sed enim ut sem. Ac tortor vitae purus faucibus
-                        ornare suspendisse sed nisi lacus. Diam sit amet nisl suscipit
-                        adipiscing bibendum. Diam sit amet nisl suscipit adipiscing bibendum est
-                        ultricies integer. Enim sed faucibus turpis in eu mi. Vel pharetra vel
-                        turpis nunc eget lorem dolor. Ornare arcu dui vivamus arcu felis bibendum
-                        ut tristique. Lobortis elementum nibh tellus molestie nunc non blandit.
-                        Pharetra vel turpis nunc eget lorem dolor. Nulla porttitor massa id neque
-                        aliquam vestibulum morbi blandit cursus. Porttitor lacus luctus accumsan tortor
-                        posuere ac. Tellus elementum sagittis vitae et.
+                        Obrigado (a) por escolher nossa marca!.​
+                    </p>
+                        
+                    <p>​
+                        Para nós da Trane, estar presente em todos os momentos da sua experiencia com nosso produto é fundamental, é o que nos move dia a dia para nos tornarmos uma marca mais presente nas residências das famílias brasileiras e também nas obras que impulsionam nosso país ao crescimento e desenvolvimento.​
                     </p>
 
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Tincidunt nunc pulvinar
-                        sapien et ligula ullamcorper. Mattis nunc sed blandit libero volutpat.
-                        A diam maecenas sed enim ut sem. Ac tortor vitae purus faucibus
-                        ornare suspendisse sed nisi lacus. Diam sit amet nisl suscipit
-                        adipiscing bibendum. Diam sit amet nisl suscipit adipiscing bibendum est
-                        ultricies integer. Enim sed faucibus turpis in eu mi. Vel pharetra vel
-                        turpis nunc eget lorem dolor. Ornare arcu dui vivamus arcu felis bibendum
-                        ut tristique. Lobortis elementum nibh tellus molestie nunc non blandit.
-                        Pharetra vel turpis nunc eget lorem dolor. Nulla porttitor massa id neque
-                        aliquam vestibulum morbi blandit cursus. Porttitor lacus luctus accumsan tortor
-                        posuere ac. Tellus elementum sagittis vitae et.
+                        Criamos este canal de comunicação para que você tenha a comodidade de agendar suas visitas técnicas de forma rápida, eficaz e com toda seriedade que nossos clientes precisam e merecem.​
                     </p>
                 </div>
                 <div class="modal-footer">

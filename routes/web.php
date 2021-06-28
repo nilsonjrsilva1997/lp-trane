@@ -33,6 +33,10 @@ Route::prefix('atividades')->group(function () {
     });
 });
 
+Route::get('/adm', function () {
+    return view('testes.adm');
+});
+
 
 
 Route::prefix('technician')->group(function () {
