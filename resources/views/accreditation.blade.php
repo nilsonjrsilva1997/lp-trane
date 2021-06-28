@@ -34,7 +34,7 @@
                             Usar minha localização
                         </label>
                     </div> --}}
-                    
+
                     <div class="pt-3">
                         <button id="btnSearchTechnician" class="btn btn-primary btn-block">Procurar</button>
                     </div>
@@ -222,74 +222,74 @@
 
             //     console.log('cep: ' + $cep);
             // } else {
-                var radius = $('#radius');
-                var zipCode = $('#zip_code');
-                var errorMessage = $('.error-message-radius');
-                var errorMessageZipCode = $('.error-message-zipcode');
+            var radius = $('#radius');
+            var zipCode = $('#zip_code');
+            var errorMessage = $('.error-message-radius');
+            var errorMessageZipCode = $('.error-message-zipcode');
 
-                if (radius.val() == "") {
-                    radius.addClass('is-invalid');
-                    errorMessage.html(`<p class="help-danger">O campo raio é obrigatório</p>`);
-                } else {
-                    radius.removeClass('is-invalid');
-                    errorMessage.html(`<p class=""></p>`);
-                }
+            if (radius.val() == "") {
+                radius.addClass('is-invalid');
+                errorMessage.html(`<p class="help-danger">O campo raio é obrigatório</p>`);
+            } else {
+                radius.removeClass('is-invalid');
+                errorMessage.html(`<p class=""></p>`);
+            }
 
-                if (zipCode.val() == "") {
-                    zipCode.addClass('is-invalid');
-                    errorMessageZipCode.html(`<p class="help-danger">O campo raio é obrigatório</p>`);
+            if (zipCode.val() == "") {
+                zipCode.addClass('is-invalid');
+                errorMessageZipCode.html(`<p class="help-danger">O campo raio é obrigatório</p>`);
 
-                } else {
-                    zipCode.removeClass('is-invalid');
-                    errorMessageZipCode.html(`<p class=""></p>`);
-                }
+            } else {
+                zipCode.removeClass('is-invalid');
+                errorMessageZipCode.html(`<p class=""></p>`);
+            }
 
-                if (zipCode.val() != "" && radius != "") {
-                    var dataUsu = {
-                        'zip_code': zipCode.val(),
-                        'radius': radius.val(),
-                        'cep_ou_local': 'CEP'
-                    };
+            if (zipCode.val() != "" && radius != "") {
+                var dataUsu = {
+                    'zip_code': zipCode.val(),
+                    'radius': radius.val(),
+                    'cep_ou_local': 'CEP'
+                };
 
-                    localStorage.setItem("zip_code", zipCode.val());
+                localStorage.setItem("zip_code", zipCode.val());
 
-                    $.ajax({
-                        url: '/api/technician/search/by_location',
-                        method: 'POST',
-                        data: dataUsu,
-                        success: function(data) {
-                            var htmlCards = '';
+                $.ajax({
+                    url: '/api/technician/search/by_location',
+                    method: 'POST',
+                    data: dataUsu,
+                    success: function(data) {
+                        var htmlCards = '';
 
-                            $('#messageResults').html(`
+                        $('#messageResults').html(`
                                                 <div class="col-md-12 col-12 text-left">
                                                     <p class="text-left text-results-1">Resultados para CEP ${$('#zip_code').val()} em um raio de ${$('#radius').val()}km</p>
                                                     <h1 class="text-title text-left text-results">Encontramos ${data.length} técnicos na sua região</h1>
                                                 </div>
                                             `);
 
-                            for (let i = 0; i < data.length; i++) {
-                                var srcImage = '';
-                                var phone = '';
-                                var phoneLink = '';
+                        for (let i = 0; i < data.length; i++) {
+                            var srcImage = '';
+                            var phone = '';
+                            var phoneLink = '';
 
-                                if (data[i].usu_logo === null) {
-                                    srcImage =
-                                        `https://scontent-gru2-1.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeEZyILZuVe3bjGi75E2bwrzso2H55p0AlGyjYfnmnQCUfPvdVtza2vJZsaEqlJcJV6yvbp2x6F3qvKy42Kooc5V&_nc_ohc=fVddfNcjRZkAX_9WWWE&_nc_ht=scontent-gru2-1.xx&oh=0ff524be16a82edb60ade21ec53e1cdd&oe=60DA1B38`;
-                                } else {
-                                    srcImage = `/images/${data[i].usu_logo}`;
-                                }
+                            if (data[i].usu_logo === null) {
+                                srcImage =
+                                    `https://scontent-gru2-1.xx.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?_nc_cat=1&ccb=1-3&_nc_sid=7206a8&_nc_eui2=AeEZyILZuVe3bjGi75E2bwrzso2H55p0AlGyjYfnmnQCUfPvdVtza2vJZsaEqlJcJV6yvbp2x6F3qvKy42Kooc5V&_nc_ohc=fVddfNcjRZkAX_9WWWE&_nc_ht=scontent-gru2-1.xx&oh=0ff524be16a82edb60ade21ec53e1cdd&oe=60DA1B38`;
+                            } else {
+                                srcImage = `/images/${data[i].usu_logo}`;
+                            }
 
 
-                                if (data[i].usu_phone == null) {
-                                    phoneLink = '#';
-                                } else {
-                                    phone = data[i].usu_phone.replace('(', "").replace(')', '').replace(
-                                        '-', '');
-                                    phoneLink =
-                                        `https://api.whatsapp.com/send?phone=55${phone}&text=Olá%20${data[i].usu_name},%20te%20vi%20na%20pagina%20da%20Trane,%20gostaria%20de%20um%20orçamento.`;
-                                }
+                            if (data[i].usu_phone == null) {
+                                phoneLink = '#';
+                            } else {
+                                phone = data[i].usu_phone.replace('(', "").replace(')', '').replace(
+                                    '-', '');
+                                phoneLink =
+                                    `https://api.whatsapp.com/send?phone=55${phone}&text=Olá%20${data[i].usu_name},%20te%20vi%20na%20pagina%20da%20Trane,%20gostaria%20de%20um%20orçamento.`;
+                            }
 
-                                htmlCards += `<div class="col-md-4 col-12 d-flex justify-content-center mt-3">
+                            htmlCards += `<div class="col-md-4 col-12 d-flex justify-content-center mt-3">
                                                                 <div class="card" style="/* width: 18rem; */">
                                                                     <img class="card-img-top image" src="${srcImage}" alt="Card image cap">
                                                                     <div class="card-body">
@@ -335,17 +335,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>`;
-                            }
-                            $('#containerTechnician').html(htmlCards);
-
-                            window.location.href = '#tecnicos';
                         }
-                    });
+                        $('#containerTechnician').html(htmlCards);
 
-                } else {
-                    return;
-                }
-            
+                        window.location.href = '#tecnicos';
+                    }
+                });
+
+            } else {
+                return;
+            }
         });
     </script>
 
