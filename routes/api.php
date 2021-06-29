@@ -99,6 +99,12 @@ Route::group(['middleware' => 'api'], function() {
 
     Route::prefix('user')->group(function () {
         Route::get('show/{id}/', [\App\Http\Controllers\UserController::class, 'show']);
-    }); 
+    });
+
+    Route::prefix('client')->group(function () {
+        Route::get('notify/', [\App\Http\Controllers\SendNotificationController::class, 'sendMail']);
+    });
+
+    // sendMail
 });
 

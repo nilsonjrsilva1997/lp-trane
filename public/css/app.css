@@ -10196,3 +10196,7 @@ body.loading .modal-loading {
 .area-upload label.label-upload * {
   pointer-events: none;
 }
+
+.list-style-none {
+  list-style-type: none;
+}

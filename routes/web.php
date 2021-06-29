@@ -38,7 +38,6 @@ Route::get('/adm', function () {
 });
 
 
-
 Route::prefix('technician')->group(function () {
     Route::post('/search', [\App\Http\Controllers\TechnicianController::class, 'searchTechnician']);
 });
@@ -47,3 +46,6 @@ Route::prefix('images')->group(function () {
     Route::get('/{image}', [\App\Http\Controllers\ImageController::class, 'show']);
 });
 
+Route::get('/pesquisa_satisfacao', function () {
+    return view('research.satisfaction');
+});
